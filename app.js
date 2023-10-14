@@ -38,8 +38,10 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-app.listen(process.env.PORT, function () {
-  // console.log('listening on port http://localhost:8080');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function () {
+  console.log(`Server is running on http://localhost:8080`);
 });
 
 module.exports = app;
